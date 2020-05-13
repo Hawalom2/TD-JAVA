@@ -1,15 +1,13 @@
 import java.lang.Math;
-public   class Rectangle extends Figure{
-	private double largeur;
+public   class Carre extends Figure{
     
        //Surcharge
         //Constructeur par defaut
-         public Rectangle(){
+         public Carre(){
          }
       //Constructeur surchargé
-         public Rectangle(double longueur,double largeur){
+         public Carre(double longueur){
              this.longueur= longueur;
-	     this.largeur= largeur;
         }
       //Regles de Surcharge
          //1-deux Methodes qui portent le meme nom et qui ont le meme type de retour
@@ -25,29 +23,23 @@ public   class Rectangle extends Figure{
          
 
       */
-	public double getLargeur(){
-		return this.largeur;
-	}
-	public void setLargeur(double largeur){
-		this.largeur=largeur;
-	}
 
      //Methodes Metiers abstraites instances
 
      //Redefinition
          @Override
            public double demiPerimetre(){
-               return this.longueur+this.largeur;
+               return this.longueur*2;
            }
 
           @Override
            public double surface(){
-              return this.longueur*this.largeur;
+              return this.longueur*this.longueur;
            }
 
              @Override
             public  double diagonale(){
-                return Math.sqrt(Math.pow(this.longueur,2)+Math.pow(this.largeur,2));
+                return Math.sqrt(Math.pow(this.longueur,2)+Math.pow(this.longueur,2));
             }
    
  
